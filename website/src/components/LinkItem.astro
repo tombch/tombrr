@@ -1,0 +1,23 @@
+---
+import type { Link } from "../types";
+import { Icon } from "astro-icon/components";
+
+interface Props {
+  link: Link;
+}
+
+const { link } = Astro.props;
+---
+
+<li>
+  <a
+    href={link.url}
+    target="_blank"
+    rel="noopener noreferrer"
+    style={`--icon-colour: ${link.icon.colour}`}
+    class={`flex items-center justify-center gap-2 bg-red-950 px-8 py-2.5 rounded-3xl transition-colors focus:outline-none hover:text-(--icon-colour) focus-visible:text-(--icon-colour)`}
+  >
+    <Icon name={link.icon.name} />
+    {link.name}
+  </a>
+</li>
