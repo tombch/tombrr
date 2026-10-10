@@ -15,7 +15,7 @@ const { link } = Astro.props;
     target="_blank"
     rel="noopener noreferrer"
     style={`--icon-colour: ${link.icon.colour}`}
-    class={`flex items-center justify-center gap-2 bg-red-950 px-8 py-2.5 rounded-3xl transition-colors focus:outline-none hover:text-(--icon-colour) focus-visible:text-(--icon-colour)`}
+    class={`flex items-center justify-center gap-2 bg-neutral-800 hover:bg-neutral-700 px-8 py-2.5 rounded-3xl transition-colors focus:outline-none hover:text-(--icon-colour) focus-visible:text-(--icon-colour)`}
   >
     <Icon name={link.icon.name} />
     {link.name}
